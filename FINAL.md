@@ -13,11 +13,7 @@ http://localhost:5000/voter/signup
 
 //login
 POST
-http://localhost:5000/voter/login
-{
-    "aadharCardNumber": 121212121213,
-    "password": "Test"
-}
+
 
 
 //Vote casting 
@@ -32,4 +28,5 @@ http://localhost:5000/party/result
 //Authorization Check
 POST
 http://localhost:5000/party/CandidateAdd
+
 
