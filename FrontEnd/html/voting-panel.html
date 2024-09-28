@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .candidate {
+            margin-bottom: 20px;
+        }
+        .dropdown-content {
+            display: none; /* Initially hide dropdown content */
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 0;
+        }
+        .dropdown-content.show {
+            display: block; /* Show dropdown content when "show" class is added */
+        }
+        .candidate-details {
+            display: flex;
+            flex-direction: column; /* Arrange details in a column */
+            color: #333; /* Add a dark gray text color */
+        }
+        .detail-item {
+            margin: 2px 0; /* Space between details */
+        }
+        /* Centering the button */
+        .submit-btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Add some spacing above the button */
+        }
+        
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans font-poppins">
+    <div class="max-w-md mx-auto p-4">
+        <h1 class="text-xl font-bold mb-4">Voting Panel</h1>
+
+        <!-- Candidate 1: Baburao -->
+        <div class="candidate bg-gray-800 p-4 rounded-lg">
+            <div class="flex items-center">
+                <input type="radio" name="candidate" id="baburao" class="form-radio text-blue-500 h-4 w-4 mr-2">
+                <label for="baburao" class="flex items-center cursor-pointer">
+                    <p class="font-bold">Baburao</p>
+                    <p class="text-gray-400 ml-2">Independent</p>
+                </label>
+                <div class="flex items-center ml-auto">
+                    <i class="fas fa-glasses text-2xl text-white mr-4"></i>
+                    <button class="focus:outline-none" onclick="toggleDropdown(event, 'dropdown1')">
+                        <i class="fas fa-chevron-down text-2xl text-white"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="dropdown1" class="dropdown-content">
+                <div class="candidate-details">
+                    <p class="detail-item">Name: Baburao Ganpatrao Apte</p>
+                    <p class="detail-item">Age: 58</p>
+                    <p class="detail-item">Party: Independent</p>
+                    <p class="detail-item">Education: BA (English Hons.)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Candidate 2: Naredra Modi -->
+        <div class="candidate bg-gray-800 p-4 rounded-lg">
+            <div class="flex items-center">
+                <input type="radio" name="candidate" id="modi" class="form-radio text-blue-500 h-4 w-4 mr-2">
+                <label for="modi" class="flex items-center cursor-pointer">
+                    <p class="font-bold">Naredra Modi</p>
+                    <p class="text-gray-400 ml-2">BJP</p>
+                    <i class="fas fa-flower text-2xl text-orange-500 mr-4"></i>
+                </label>
+                <div class="flex items-center ml-auto">
+                    <img src="./bjp logo.png" style="height: 50px;">
+                    <button class="focus:outline-none" onclick="toggleDropdown(event, 'dropdown2')">
+                        <i class="fas fa-chevron-down text-2xl text-white"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="dropdown2" class="dropdown-content">
+                <div class="candidate-details">
+                    <p class="detail-item">Name: Naredra Modi</p>
+                    <p class="detail-item">Age: 70</p>
+                    <p class="detail-item">Party: BJP</p>
+                    <p class="detail-item">Education: Bachelor of Science in Chemistry</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Candidate 3: Rahul Gandhi -->
+        <div class="candidate bg-gray-800 p-4 rounded-lg">
+            <div class="flex items-center">
+                <input type="radio" name="candidate" id="rahul" class="form-radio text-blue-500 h-4 w-4 mr-2">
+                <label for="rahul" class="flex items-center cursor-pointer">
+                    <p class="font-bold">Rahul Gandhi</p>
+                    <p class="text-gray-400 ml-2">Congress</p>
+                    <i class="fas fa-hand-paper text-2xl text-orange-500 mr-4"></i>
+                </label>
+                <div class="flex items-center ml-auto">
+                    <img src="./congress logo.svg" style="height: 50px;">
+                    <button class="focus:outline-none" onclick="toggleDropdown(event, 'dropdown3')">
+                        <i class="fas fa-chevron-down text-2xl text-white"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="dropdown3" class="dropdown-content">
+                <div class="candidate-details">
+                    <p class="detail-item">Name: Rahul Gandhi</p>
+                    <p class="detail-item">Age: 52</p>
+                    <p class="detail-item">Party: Congress</p>
+                    <p class="detail-item">Education: Bachelor of Arts in History</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Candidate 4: Arvind Kejriwal -->
+        <div class="candidate bg-gray-800 p-4 rounded-lg">
+            <div class="flex items-center">
+                <input type="radio" name="candidate" id="kejriwal" class="form-radio text-blue-500 h-4 w-4 mr-2">
+                <label for="kejriwal" class="flex items-center cursor-pointer">
+                    <p class="font-bold">Arvind Kejriwal</p>
+                    <p class="text-gray-400 ml-2">AAP</p>
+                </label>
+                <div class="flex items-center ml-auto">
+                    <img src="./aap logo.jpeg.jpg" style="height: 50px;">
+                    <button class="focus:outline-none" onclick="toggleDropdown(event, 'dropdown4')">
+                        <i class="fas fa-chevron-down text-2xl text-white"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="dropdown4" class="dropdown-content">
+                <div class="candidate-details">
+                    <p class="detail-item">Name: Arvind Kejriwal</p>
+                    <p class="detail-item">Age: 54</p>
+                    <p class="detail-item">Party: AAP</p>
+                    <p class="detail-item">Education: Bachelor of Technology in Mechanical Engineering</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Centered button -->
+        <div class="submit-btn-container">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-poppins">
+                Submit Vote
+            </button>
+        </div>
+        
+    </div>
+
+    <script>
+        function toggleDropdown(event, dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.classList.toggle("show");
+            // Close other dropdowns
+            const allDropdowns = document.querySelectorAll('.dropdown-content');
+            allDropdowns.forEach((dropdownItem) => {
+                if (dropdownItem !== dropdown) {
+                    dropdownItem.classList.remove('show');
+                }
+            });
+        }
+
+        // Close dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.fa-chevron-down')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

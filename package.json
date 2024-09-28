@@ -1,0 +1,30 @@
+{
+  "name": "voting_website",
+  "version": "1.0.0",
+  "description": "the is a full functional and secure voting site ",
+  "scripts": {
+    "dev":"nodemon index.js",
+    "start":"node index.js"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VashuVats/Hackathon_HackBro.git"
+  },
+  "author": "HackBro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VashuVats/Hackathon_HackBro/issues"
+  },
+  "homepage": "https://github.com/VashuVats/Hackathon_HackBro#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

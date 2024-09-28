@@ -1,0 +1,149 @@
+.grid-area{
+    display: grid;
+    grid-template-rows: 0.6fr 4.5fr 1fr;
+    grid-template-columns: 1.4fr 2fr 2fr 1.4fr;
+    height: 100vh;
+    width: 100%;
+}
+
+.row-01{
+    background-color: rgba(0, 0, 0, 0.9);
+    grid-area: 1/1/2/5;
+
+
+}
+
+
+.row-03{
+    background-color: rgba(0, 0, 0, 0.9);
+    grid-area: 3/1/4/5;
+}
+
+.row-02{
+    display: flex;
+}
+
+.empty-01{
+    grid-area: 2/1/3/2;
+    background-color: rgba(0, 0, 0, 0.9);
+    
+}
+.empty-02{
+    grid-area: 2/4/3/5;
+    background-color: rgba(0, 0, 0, 0.9);
+    
+}
+
+.img-container{
+    grid-area: 2/2/3/3;
+   
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content:flex-start;
+    padding-left: 60px;
+    flex-shrink: 0;
+    margin-bottom: 150px;
+    
+    
+}
+
+.text-1{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.link-1{
+    color: #f23953;
+    text-decoration: none;
+    margin-right: 4px;
+}
+
+.empire{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.cookies{
+    font-size: 2.5rem;
+    padding-top: 20px;
+    font-weight: 200;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.form-1 {
+    grid-area: 2/3/3/4;
+    height: auto;
+    padding: 20px 40px; /* Add padding for space around form fields */
+    background-color: #fff; /* Change the form background color */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a cleaner look */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    justify-content: space-around;
+}
+
+.text-box {
+    padding: 10px;
+    font-size: 1rem;
+    border: none; /* Remove all borders */
+    border-bottom: 2px solid #ccc; /* Only bottom border */
+    width: 100%;
+    background-color: transparent; /* Ensure no background for cleaner look */
+    transition: border-color 0.3s ease; /* Smooth transition for hover/focus */
+}
+
+.text-box:focus {
+    border-bottom: 2px solid #66afe9; /* Highlight bottom border on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+
+.btn {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #f23953; /* Matching the link color */
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 0px;
+    
+}
+
+.btn:hover {
+    background-color: #d12e45; 
+}
+
+label {
+    font-size: 0.9rem;
+    color: #33333371;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.link-2{
+   color: #33333371;
+    
+    margin-left: 20px;
+    font-size: 1.25rem;
+}
+
